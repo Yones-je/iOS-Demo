@@ -1,0 +1,6 @@
+module Pods_iOSDEMO_iOSDEMOTests {
+  umbrella header "Pods-iOSDEMO-iOSDEMOTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
