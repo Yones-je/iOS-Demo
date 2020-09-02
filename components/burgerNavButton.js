@@ -11,9 +11,9 @@ const BurgerNavButton = ({navigation}) => {
     <TouchableOpacity onPress={burgerNav}>
       <Icon
         name={Platform.OS === 'android' ? 'md-menu' : 'ios-menu'}
-        size={23}
-        color={Platform.OS === 'android' ? 'white' : 'white'}
-        style={{padding: 10}}
+        size={35}
+        color="black"
+        style={{paddingBottom: 10, paddingLeft: 10}}
       />
     </TouchableOpacity>
   );

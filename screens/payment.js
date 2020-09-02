@@ -1,12 +1,14 @@
 import React, {useState} from 'react';
 import {View, Text, StyleSheet, Button, TextInput} from 'react-native';
 
-export default function Payment({navigation}) {
+export default function Payment({route, navigation}) {
   const [number, setNumber] = useState();
   const [name, setName] = useState();
   const [date, setDate] = useState();
   const [cvv, setCVV] = useState();
   const [cvvVisible, setCVVVisible] = useState(false);
+  const {status} = route.params;
+  const {total} = route.params;
 
   const onCVVIconPress = () => {
     setCVVVisible(!cvvVisible);
@@ -48,9 +50,11 @@ export default function Payment({navigation}) {
         placeholder="Namn Efternamn"
       />
       <Button
-        title="Betala Nu"
+        title={`Betala ${total}kr`}
         onPress={() => {
-          navigation.navigate('OrderStatus');
+          navigation.navigate('OrderStatus', {
+            status: status,
+          });
         }}
       />
     </View>

@@ -40,13 +40,21 @@ export default function CartScreen({navigation}) {
           placeholder="Välj betalningsalternativ"
           doneButtonText="Välj"
           onValueChange={(value) => {
-            navigation.navigate(value);
+            navigation.navigate(value[0], {
+              status: value[1],
+              total: cartTotalAmount,
+            });
           }}
           selected={null}
-          dismissable={true}
-          disabled={true}>
-          <SelectPicker.Item label="Betala Direkt" value="Pay" />
-          <SelectPicker.Item label="Betala i Kassan" value="OrderStatus" />
+          dismissable={true}>
+          <SelectPicker.Item
+            label="Betala Direkt"
+            value={['Pay', 'Din beställning förbereds']}
+          />
+          <SelectPicker.Item
+            label="Betala i Kassan"
+            value={['OrderStatus', 'Väntar på betalning']}
+          />
         </SelectPicker>
       </View>
       <FlatList
@@ -72,13 +80,15 @@ export default function CartScreen({navigation}) {
 
 const styles = StyleSheet.create({
   screen: {
-    margin: 20,
+    flex: 1,
+    backgroundColor: 'wheat',
   },
   summary: {
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
     marginBottom: 20,
+    marginTop: 40,
     padding: 10,
     borderRadius: 10,
     elevation: 3,
@@ -87,8 +97,6 @@ const styles = StyleSheet.create({
     shadowColor: '#333',
     shadowOpacity: 0.3,
     shadowRadius: 2,
-    marginTop: 20,
-    backgroundColor: 'yellow',
     borderWidth: 1,
   },
   summaryText: {

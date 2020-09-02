@@ -78,7 +78,7 @@ export default function eatHereNavigator({navigation}) {
         options={({navigation}) => {
           return {
             headerTitle: () => (
-              <HeaderDos navigation={navigation} title="Beställning" />
+              <HeaderDos navigation={navigation} title="Kassa" />
             ),
           };
         }}
@@ -88,7 +88,7 @@ export default function eatHereNavigator({navigation}) {
         component={Payment}
         options={({navigation}) => {
           return {
-            headerTitle: () => <HeaderDos navigation={navigation} title=" " />,
+            headerTitle: () => <Header navigation={navigation} title=" " />,
             headerBackTitle: ' ',
           };
         }}
@@ -98,9 +98,8 @@ export default function eatHereNavigator({navigation}) {
         component={OrderStatus}
         options={({navigation}) => {
           return {
-            headerTitle: () => (
-              <HeaderDos navigation={navigation} title="Orderstatus" />
-            ),
+            headerTitle: () => <Header navigation={navigation} title="" />,
+            headerBackTitle: ' ',
           };
         }}
       />
