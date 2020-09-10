@@ -36,7 +36,7 @@ const styles = StyleSheet.create({
     color: 'deepskyblue',
     alignSelf: 'center',
     position: 'absolute',
-    left: 350,
+    left: 310,
     top: 40,
     //justifyContent: 'flex-end',
   },

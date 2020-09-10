@@ -4,7 +4,7 @@ import Icon from 'react-native-vector-icons/Ionicons';
 import * as cartActions from '../store/actions/cart';
 import {useDispatch} from 'react-redux';
 
-const MenuItem = props => {
+const MenuItem = (props) => {
   const dispatch = useDispatch();
 
   return (
@@ -48,7 +48,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    width: '100%',
+    width: '90%',
   },
   title: {
     fontFamily: 'Poppins-Semibold',
@@ -64,6 +64,9 @@ const styles = StyleSheet.create({
   },
   icon: {
     color: 'violet',
+    position: 'absolute',
+    left: 0,
+    bottom: -15,
   },
 });
 
