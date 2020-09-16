@@ -1,8 +1,9 @@
 import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
 import About from '../screens/about';
-import Header from '../components/header';
+import HeaderDos from '../components/headerDos';
 import GoToCartButton from '../components/goToCartButton';
+import BurgerNavButton from '../components/burgerNavButton';
 
 const Stack = createStackNavigator();
 
@@ -28,7 +29,10 @@ export default function aboutNavigator({navigation}) {
             headerRight: () => {
               return <GoToCartButton navigation={navigation} />;
             },
-            headerTitle: () => <Header navigation={navigation} title="Om" />,
+            headerTitle: () => <HeaderDos navigation={navigation} title="Om" />,
+            headerLeft: () => {
+              return <BurgerNavButton navigation={navigation} />;
+            },
           };
         }}
       />

@@ -72,6 +72,5 @@ styles = StyleSheet.create({
     bottom: 140,
     borderColor: '#888',
     borderWidth: 1,
-    //width: '100%',
   },
 });
