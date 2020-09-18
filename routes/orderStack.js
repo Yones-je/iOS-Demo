@@ -5,7 +5,7 @@ import Header from '../components/header';
 
 const Stack = createStackNavigator();
 
-export default function orderNavigator({navigation}) {
+export default function orderNavigator({route, navigation}) {
   return (
     <Stack.Navigator
       initialRouteName="Din Order"

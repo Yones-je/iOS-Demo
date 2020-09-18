@@ -1,5 +1,5 @@
 import React from 'react';
-import {StyleSheet, View, Text, Image} from 'react-native';
+import {StyleSheet, View, SafeAreaView, Image} from 'react-native';
 import ImageButton from '../components/imageButton';
 
 export default function Home({navigation}) {

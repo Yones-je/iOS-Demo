@@ -1,5 +1,5 @@
 import React from 'react';
-import {StyleSheet, View, Text} from 'react-native';
+import {StyleSheet, View, Text, Image} from 'react-native';
 
 export default function About() {
   return (
@@ -8,6 +8,13 @@ export default function About() {
       <View style={styles.card}>
         <Text>Kontaktinformation: ipsem lorum</Text>
         <Text>Lorum ipsem tripsem mipsem</Text>
+      </View>
+      <View style={styles.imgContainer}>
+        <Text style={styles.header}>Hitta Hit</Text>
+        <Image
+          source={require('../assets/Googlemap-600x551.jpg')}
+          style={styles.img}
+        />
       </View>
     </View>
   );
@@ -19,11 +26,21 @@ const styles = StyleSheet.create({
     backgroundColor: 'wheat',
     flex: 1,
   },
+  imgContainer: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    margin: 10,
+  },
   header: {
     fontFamily: 'Poppins-SemiBold',
     fontWeight: 'bold',
     fontSize: 22,
     marginTop: 20,
+  },
+  img: {
+    margin: 10,
+    width: '110%',
+    height: '70%',
   },
   card: {
     borderRadius: 10,
